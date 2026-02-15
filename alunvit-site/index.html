@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALUNVIT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Michroma&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Tenor Sans', sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background: radial-gradient(circle at center, #0a0a0a 0%, #000 80%);
+        }
+
+        /* Заголовок для компьютеров */
+        .main-title {
+            font-size: 3.8rem;
+            font-weight: 100;
+            letter-spacing: 35px;
+            text-transform: uppercase;
+            margin-bottom: 40px; 
+            margin-right: -35px;
+            opacity: 0;
+            filter: blur(8px);
+            animation: reveal 2.5s cubic-bezier(0.1, 0, 0.1, 1) forwards;
+            text-align: center;
+        }
+
+        @keyframes reveal {
+            to {
+                opacity: 1;
+                filter: blur(0);
+                letter-spacing: 40px;
+            }
+        }
+
+        /* Настройки для ТЕЛЕФОНОВ (экраны меньше 768px) */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 1.8rem; /* Уменьшаем шрифт */
+                letter-spacing: 15px; /* Уменьшаем разлет букв */
+                margin-right: -15px;
+                margin-bottom: 30px;
+            }
+            
+            @keyframes reveal {
+                to {
+                    opacity: 1;
+                    filter: blur(0);
+                    letter-spacing: 18px; /* Своя анимация для мобилок */
+                }
+            }
+
+            .links-container a {
+                font-size: 0.75rem !important; /* Чуть меньше шрифт ссылок */
+                letter-spacing: 5px !important; /* Меньше разлет букв */
+            }
+        }
+
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+            width: 100%;
+        }
+
+        .links-container a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9rem; 
+            font-family: 'Michroma', sans-serif;
+            letter-spacing: 8px;
+            opacity: 0;
+            transition: all 0.4s ease;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .links-container a:hover {
+            opacity: 1 !important;
+            letter-spacing: 12px;
+            text-shadow: 0 0 15px #fff;
+        }
+
+        .link { animation: fadeIn 2s forwards; }
+        .l1 { animation-delay: 1.8s; }
+        .l2 { animation-delay: 2.0s; }
+        .l3 { animation-delay: 2.2s; }
+        .l4 { animation-delay: 2.4s; }
+        .l5 { animation-delay: 2.6s; }
+        .l6 { animation-delay: 2.8s; }
+        .l7 { animation-delay: 3.0s; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 0.6; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="main-title">ALUNVIT</h1>
+
+    <div class="links-container">
+        <a href="https://www.donationalerts.com/r/alunvit12" class="link l1" target="_blank">DONATIONALERTS</a>
+        <a href="https://t.me/Alunvit" class="link l2" target="_blank">TELEGRAM</a>
+        <a href="https://www.tiktok.com/@alunvit.live2?is_from_webapp=1&sender_device=pc" class="link l3" target="_blank">TIKTOK</a>
+        <a href="https://www.instagram.com/alunvit_off?igsh=MXNiZzF0dWNhc2NsNQ==" class="link l4" target="_blank">INSTAGRAM</a>
+        <a href="https://youtube.com/@alunvit_off?si=dvtEMYZfISvz5sqe" class="link l5" target="_blank">YOUTUBE</a>
+        <a href="https://www.twitch.tv/alunvit" class="link l6" target="_blank">TWITCH</a>
+        <a href="https://author.today/work/513303" class="link l7" target="_blank">BOOK</a>
+    </div>
+
+</body>
+</html>
